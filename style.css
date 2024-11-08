@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgb(0, 0, .2);
+}
+
+.logo-imagem {
+    width: 4vw;
+    margin-left: 21px;
+}
+
+/*
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+*/
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.action {
+    color: var(--main-color);
+}
+
+#menu-icone {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Imagens/FundoMilitarNotebook.png');
+    background-size: cover;
+    background-position: center 20%;
+    background-attachment: fixed;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/*
+.imagem-inicio img {
+    width: 35vw;
+    animation: floatImagem 4s ease-in-out infinite;
+}
+*/
+
+@keyframes floatImagem {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.inicio-conteudo h3 {
+    font-size: 4.2rem;
+    font-weight: 700;
+}
+
+.inicio-conteudo h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+} 
+
+.inicio-conteudo h1 {
+    font-size: 8.0rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.rede-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.rede-social a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.sobre-imagem img {
+    width: 40vw;
+}
+
+.cabecalho {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.sobre-conteudo h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.sobre-conteudo h3 {
+    font-size: 2.6rem;
+}
+
+.sobre-conteudo p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.servicos h2 {
+    margin-bottom: 5rem;
+}
+
+.servicos-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.servicos-conteudo .servicos-box {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.servicos-conteudo .servicos-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.servicos-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.servicos-box h3 {
+    font-size: 2.0rem;
+}
+
+.servicos-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.portifolio {
+    background: var(--second-bg-color);
+}
+
+.portifolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portifolio-conteudo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portifolio-conteudo .portifolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portifolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portifolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portifolio-box .portifolio-camada {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portifolio-box:hover .portifolio-camada {
+    transform: translateY(0);
+}
+
+.portifolio-camada h4 {
+    font-size: 3rem;
+}
+
+.portifolio-camada p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portifolio-camada a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.contato h2 {
+    margin-bottom: 3rem;
+}
+
+.contato form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contato form .caixa-entrada {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contato form .caixa-entrada input,
+.contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contato form .caixa-entrada input {
+    width: 49%;
+}
+
+.contato form textarea {
+    resize: none;
+}
+
+.centralizar {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.contato form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.rodape-texto p {
+    font-size: 1.6rem;
+}
+
+.rodape-icone a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.rodape a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.rodape a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/* pontos de interrupção */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .servicos {
+        padding-bottom: 7rem;
+    }
+
+    .portifolio {
+        padding-bottom: 7rem;
+    }
+
+    .contato {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icone {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.action {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .inicio {
+        flex-direction: column;
+    }
+
+    .inicio-conteudo h3 {
+        font-size: 2.6rem;
+    }
+
+    .incio-conteudo h1 {
+        font-size: 5rem;
+    }
+    /*
+    .imagem-inicio img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    */
+
+    .sobre {
+        flex-direction: column-reverse;
+    }
+
+    .sobre-imagem img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .servicos h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portifolio {
+        margin-bottom: 3rem;
+    }
+
+    .portifolio-conteudo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .portifolio-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contato form .caixa-entrada input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    /*
+    .imagem-inicio img {
+        width: 90vw;
+    }
+    */
+
+    .sobre-imagem img {
+        width: 90vw;
+    }
+    
+    .rodape {
+        flex-direction: column-reverse;
+    }
+
+    .rodape p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
